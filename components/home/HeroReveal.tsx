@@ -25,7 +25,7 @@ export function HeroReveal({ children, className = "" }: HeroRevealProps) {
   const currentRef = useRef({ x: 0, y: 0 });
   const rafRef = useRef(0);
   const insideRef = useRef(false);
-  const easingRef = useRef(heroRevealConfig.easing);
+  const easingRef = useRef<number>(heroRevealConfig.easing);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
